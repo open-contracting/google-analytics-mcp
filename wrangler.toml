@@ -11,10 +11,10 @@ fallthrough = true
 [vars]
 ALLOWED_EMAIL_DOMAIN = "open-contracting.org"
 
-# Create with `pnpm exec wrangler kv namespace create OAUTH_KV`, and replace the placeholder with its ID.
+# Created with `pnpm exec wrangler kv namespace create OAUTH_KV`.
 [[kv_namespaces]]
 binding = "OAUTH_KV"
-id = "00000000000000000000000000000000"
+id = "741d972110cd47848cfad5999ce7c34c"
 
 [observability.logs]
 enabled = true
