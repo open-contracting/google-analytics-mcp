@@ -3,7 +3,7 @@ import hintsText from "./descriptions/hints.md";
 import toolsText from "./descriptions/tools.md";
 
 /** Return the sections of a Markdown file, keyed by their level-1 headings, without the leading comment. */
-export function parseSections(text: string): Record<string, string> {
+function parseSections(text: string): Record<string, string> {
   const sections: Record<string, string> = {};
   const parts = text.replace(/^<!--[\s\S]*?-->/, "").split(/^# (\S+)\n/m);
   for (let i = 1; i < parts.length; i += 2) {

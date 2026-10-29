@@ -86,12 +86,13 @@ In the inspector, set the transport to _Streamable HTTP_ and the URL to `https:/
 
 ## Develop
 
-Run the tests, type checker and linter:
+Run the tests, type checker and linters:
 
 ```bash
 pnpm exec vitest run
 pnpm exec tsc
 pnpm exec biome check .
+pnpm exec knip
 ```
 
 Run the Worker locally, with your OAuth client's credentials in a `.dev.vars` file (which is ignored by git):

@@ -130,7 +130,7 @@ export function verifyIdToken(idToken: string, clientId: string, domain: string,
 }
 
 /** Return a fresh access token for the grant's Google refresh token. */
-export async function refreshAccessToken(env: Env, refreshToken: string, now = Date.now()) {
+async function refreshAccessToken(env: Env, refreshToken: string, now = Date.now()) {
   const tokens = await requestTokens(env, { grant_type: "refresh_token", refresh_token: refreshToken });
   return {
     accessToken: tokens.access_token,

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema-jsonc.json",
+  "ignoreDependencies": [
+    "wrangler" // run with `pnpm exec` (package.json has no scripts)
+  ]
+}

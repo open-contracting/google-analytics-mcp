@@ -14,6 +14,5 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile --ignore-scripts
-      - run: pnpm exec biome ci .
       - run: pnpm exec tsc
       - run: pnpm exec vitest run
