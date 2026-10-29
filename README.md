@@ -28,8 +28,8 @@ Its tools match those of [Google's official server](https://github.com/googleana
 
 In a Google Cloud project owned by the organization, like `ocp-analytics-mcp` (a project ID can't contain "google"):
 1. Go to _APIs & Services_ > _Library_, and enable the **Google Analytics Data API** and the **Google Analytics Admin API**.
-1. Go to _Google Auth Platform_ > _Branding_, and configure the consent screen. Set the app name to one without "Google", per Google's branding rules, like "OCP Analytics for Claude". On _Audience_, set the user type to **Internal**. This avoids Google's app verification, stops refresh tokens from expiring after 7 days, and allows only the organization's accounts to sign in.
-1. On _Data Access_, add the scopes `openid`, `.../auth/userinfo.email` and `.../auth/analytics.readonly`.
+1. Go to _Google Auth Platform_ > _Branding_, and configure the consent screen. Set the app name to one without "Google", per Google's branding rules, like "OCP Analytics MCP". On _Audience_, set the user type to **Internal**. This avoids Google's app verification, stops refresh tokens from expiring after 7 days, and allows only the organization's accounts to sign in.
+1. On _Data Access_, add the scopes `openid`, `https://www.googleapis.com/auth/userinfo.email` and `https://www.googleapis.com/auth/analytics.readonly`.
 1. On _Clients_, create an OAuth client:
    - Application type: **Web application**
    - Authorized redirect URI: `https://<worker-host>/callback`, for example `https://google-analytics-mcp.opencontracting.workers.dev/callback`
