@@ -1,0 +1,10 @@
+open-contracting/google-analytics-mcp
+Copyright 2026 Open Contracting Partnership
+
+This project is licensed under the MIT License (see LICENSE), except as noted below.
+
+The files in src/descriptions/ contain tool descriptions and argument hints adapted from the Google Analytics MCP
+Server (https://github.com/googleanalytics/google-analytics-mcp), Copyright 2025 Google LLC, licensed under the
+Apache License, Version 2.0 (see licenses/Apache-2.0.txt). The text was modified as described in their headers.
+
+The tool names, parameters and behaviour follow the same project.

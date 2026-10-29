@@ -1,0 +1,15 @@
+{
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 119
+  },
+  "files": {
+    "includes": ["**", "!pnpm-lock.yaml", "!src/descriptions/*.md"]
+  }
+}

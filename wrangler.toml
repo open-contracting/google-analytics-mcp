@@ -1,0 +1,21 @@
+name = "google-analytics-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Import the tool descriptions as strings.
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]
+fallthrough = true
+
+[vars]
+ALLOWED_EMAIL_DOMAIN = "open-contracting.org"
+
+# Create with `pnpm exec wrangler kv namespace create OAUTH_KV`, and replace the placeholder with its ID.
+[[kv_namespaces]]
+binding = "OAUTH_KV"
+id = "00000000000000000000000000000000"
+
+[observability.logs]
+enabled = true
