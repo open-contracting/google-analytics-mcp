@@ -2,7 +2,7 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { Props } from "../src/auth";
-import { createServer } from "../src/index";
+import { createServer, toolResult } from "../src/index";
 import { env, mockFetch } from "./helpers";
 
 const ADMIN = "https://analyticsadmin.googleapis.com";
@@ -218,6 +218,14 @@ describe("tools/call", () => {
       isError: true,
       text: "Tool 'create_property_annotation' not implemented by this server.",
     });
+  });
+
+  it("adds a note once the tools are more than a year past their last comparison", () => {
+    expect(toolResult("{}", false, Date.parse("2027-10-27"))).toEqual({ content: [{ type: "text", text: "{}" }] });
+    const result = toolResult("Denied.", true, Date.parse("2027-10-28"));
+    expect(result.isError).toBe(true);
+    expect(result.content).toHaveLength(2);
+    expect(result.content[1]?.text).toMatch(/last compared .+ on 2026-10-27.+jmckinney@open-contracting\.org/);
   });
 
   it("logs only the tool name, property ID, status and duration", async () => {

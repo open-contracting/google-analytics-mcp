@@ -136,7 +136,7 @@ The relevant files are:
 | `analytics_mcp/tools/reporting/*.py`        | Report tools' arguments, request fields and docstrings         | `src/tools.ts`, `src/descriptions/` |
 | `analytics_mcp/tools/reporting/metadata.py` | Hints and examples                                             | `src/descriptions/hints.md`         |
 
-Ignore write tools, like `create_property_annotation`. After porting any changes, update the commit and date above.
+Ignore write tools, like `create_property_annotation`. After porting any changes, update the commit and date above, update `LAST_COMPARED` in `src/tools.ts`, and deploy. More than a year after `LAST_COMPARED`, every tool result includes a note asking Claude to tell the user that the server is due for an update.
 
 ## License
 

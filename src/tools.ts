@@ -1,6 +1,9 @@
 import * as d from "./descriptions";
 import { ADMIN, type Client, DATA, propertyName, ToolError } from "./ga";
 
+/** The date that the tools were last compared with Google's server. */
+export const LAST_COMPARED = "2026-10-27";
+
 type Args = Record<string, unknown>;
 
 interface Tool {
