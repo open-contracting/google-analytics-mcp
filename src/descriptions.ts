@@ -7,7 +7,7 @@ export function parseSections(text: string): Record<string, string> {
   const sections: Record<string, string> = {};
   const parts = text.replace(/^<!--[\s\S]*?-->/, "").split(/^# (\S+)\n/m);
   for (let i = 1; i < parts.length; i += 2) {
-    sections[parts[i] as string] = (parts[i + 1] as string).trim();
+    sections[parts[i]] = parts[i + 1].trim();
   }
   return sections;
 }
