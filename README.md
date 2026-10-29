@@ -91,7 +91,7 @@ Run the tests, type checker and linters:
 ```bash
 pnpm exec vitest run
 pnpm exec tsc
-pnpm exec biome check .
+pre-commit run --all-files
 pnpm exec knip
 ```
 
