@@ -32,6 +32,7 @@ In a Google Cloud project owned by the organization, like `ocp-analytics-mcp` (a
 1. On _Data Access_, add the scopes `openid`, `https://www.googleapis.com/auth/userinfo.email` and `https://www.googleapis.com/auth/analytics.readonly`.
 1. On _Clients_, create an OAuth client:
    - Application type: **Web application**
+   - **Use this client for an AI-powered agent**: checked (it can't be changed later)
    - Authorized redirect URI: `https://<worker-host>/callback`, for example `https://google-analytics-mcp.opencontracting.workers.dev/callback`
 
    Copy the client ID and client secret.
